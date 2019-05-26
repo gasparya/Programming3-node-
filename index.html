@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html id="html">
+
+<head>
+    <title>NODE</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="p5.js"></script>
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body><br>
+    <div id="dcdh1"><h1 id="dh1">
+        Փաստաթղթի գույնը</h1></div>
+    <div id="divColorDocument">
+        <button id="wh" onclick="w()">Սպիտակ</button>
+        <button id="blec" onclick="ble()">Սև</button>
+        <button id="re" onclick="r()">Կարմիր</button>
+        <button id="bl" onclick="b()">Կապույտ</button>
+        <button id="or" onclick="o()">Նարնջագույն</button>
+        <button id="gr" onclick="g()">Կանաչ</button>
+    </div>
+    <br>
+    <!--<table id="legend">
+        <tr>
+            <td class="legend-color">Գույն</td>
+            <td>Անվանում</td>
+            <td>Շարժվում է</td>
+            <td>Ուտում է</td>
+            <td>Բազմանում է</td>
+            <td>Սատկում է</td>
+        </tr>
+
+        <tr>
+            <td class="legend-color" style="background-color:gray"></td>
+            <td>Դատարկ վանդակներ</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:green"></td>
+            <td>Խոտ</td>
+            <td></td>
+            <td></td>
+            <td>Մոտակա 8 վանդակներում, 4 տակտը մեկ</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:yellow"></td>
+            <td>Խոտակեր</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 1֊ով</td>
+            <td>Խոտերին, մոտակա 8 վանդակներում, շարժվելիս էներգիան ավելանում է 1֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 10֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:red"></td>
+            <td>Գիշատիչ</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 2֊ով</td>
+            <td>Խոտակերներին, մոտակա 8 վանդակներում, շարժվելիս էներգիան ավելանում է 2֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 15֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:SaddleBrown"></td>
+            <td>Գազան</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 3-ով</td>
+            <td>Խոտակերներին և Գիշատիչներին, մոտակա 8 վանդակներում, շարժվելիս էներգիան ավելանում է 3ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 30-ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+         <tr>
+            <td class="legend-color" style="background-color:black"></td>
+            <td>Ամենակեր</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 3-ով</td>
+            <td>Խոտակերներին,Գիշատիչներին և Գազաններին մոտակա 8 վանդակներում, շարժվելիս էներգիան ավելանում է 3ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 40-ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 0֊ից</td>
+        </tr>
+    </table>-->
+    <div id="cor"><h1 id="ch1">Կտավի օբյեկտիների հեռացում</h1></div>
+    <div id="canvasObjectRemove">
+        <button id="wh" onclick="gr()">Խոտ</button>
+        <button id="blec" onclick="ge()">Խոտակեր</button>
+        <button id="re" onclick="pr()">Գիշատիչ</button>
+        <button id="bl" onclick="be1()">Գազան</button>
+        <button id="or" onclick="be2()">Ամենակեր</button>
+        <button id="gr" onclick="bl()">Բոլորը</button>
+    </div>    
+    <br>
+    <div id="cod"><h1 id="ch-1">Կտավի օբյեկտների ստեղծում</h1></div>
+    <div id="canvasObjectDiscipline">
+        <button id="wh" onclick="gre()">Խոտ</button>
+        <button id="blec" onclick="gea()">Խոտակեր</button>
+        <button id="re" onclick="pre()">Գիշատիչ</button>
+        <button id="bl" onclick="bea1()">Գազան</button>
+        <button id="or" onclick="bea2()">Ամենակեր</button>
+        <button id="gr" onclick="blo()">Բոլորը</button>
+    </div>
+    <br>
+</body>
+</html>
